@@ -1,0 +1,8 @@
+require:
+  - rubocop-rake
+
+AllCops:
+  NewCops: enable
+
+Rake:
+  Enabled: true

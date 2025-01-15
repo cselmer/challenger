@@ -1,0 +1,54 @@
+# Your GitHub organization name
+github_org: "cselmer"
+# The name of the repository that will be used as the base for the challenge
+base_repo_name: "delegate_cached"
+# Base name for the candidate-specific repository. The candidate's GitHub id will be appended to this name.
+candidate_base_repo_name: "challenger_candidate_repo"
+# The GitHub ids of the people who will be reviewing the code
+team_github_ids:
+  - "cselmer"
+# The list of issues that will be created in the candidate-specific repo
+# FORMAT
+# - title: Title for the Issue to be created in the candidate-specific repo
+#   body: Body for the Issue to be created in the candidate-specific repo
+issues:
+  - title: Add a new feature
+    body: |
+      We're finding that features are necessary to end-users. This issue is to add a feature.
+      - The feature should do something.
+      - The something it does should be useful in some way.
+
+  - title: Remove an unwanted feature
+    body: |
+      It appears that no one likes featureX. This issue is to remove featureX.
+        - Remove featureX from the codebase.
+        - Don't remove things unrelated to featureX.
+
+# The list of pull requests that will be created in the candidate-specific repo
+# FORMAT
+# - branch: a feature branch from the base code challenge repo - the code in this branch should be
+#     the finished state for the Pull Request you want to create
+#   commit: a commit message with appropriate detail
+#   title: Title for the Pull Request in the candidate-specific repo
+#   body: Title for the Pull Request in the candidate-specific repo
+pulls:
+  - branch: feature/feature1
+    commit: |
+        Adds feature1 to the codebase
+
+        - does things that you need for feature1
+        - does not do things you don't need for feature1
+    title: Add feature1
+    body: |
+        This PR adds feature1 to the codebase. It does things that you need for feature1 and does not do things you don't need for feature1.
+
+  - branch: feature/feature2
+    commit: |
+        Adds feature2 to the codebase
+
+        - does things that you need for feature2
+        - does not do things you don't need for feature2
+    title: Add feature2
+    body: |
+        This PR adds feature2 to the codebase. It does things that you need for feature2 and does not do things you don't need for feature2.
+
