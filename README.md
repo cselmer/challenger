@@ -21,22 +21,29 @@ threshold of the next payment tier.
 
 ## Setup
 
+### .env
+
 Rename .env-sample to .env and add your Github access token. Set up an
 access token here: https://github.com/settings/tokens
 
-
-## Config
+### base coding challenge repo
 
 The customized repos are based on an existing repo configured specifically for this
-coding challenge.
+coding challenge. The repo should have a `main` branch as the default branch,
+and a feature branch for each PR that you want to issue. These are configurable
+in config.yml
 
-The pull requests created in the customized repos are actual pull requests on
-the above repo. Additional PRs can be added by creating a PR on the above repo
-and configuring the PR information in pulls.yml
+### config.yml
 
-Issues are created from the content in issues.yml
+Contains the base information needed to create the candidate-specific repos. This
+includes the set of Issues you want the candidate to work on and the set of Pull
+Requests that you want them to review.
 
 ## Commands
+
+`rake refresh_local_directories`
+Retrieves the base coding challenge app and sets up local copies of the repo for
+each branch a PR will be issued for.
 
 `rake issue_coding_challenge_to[:github_id]`
 Creates the custom repo for the specified github_id, including issues and pull
